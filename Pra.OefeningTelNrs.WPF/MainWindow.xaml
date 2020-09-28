@@ -1,0 +1,43 @@
+﻿<Window x:Class="Pra.OefeningTelNrs.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pra.OefeningTelNrs.WPF"
+        mc:Ignorable="d"
+        Title="Telefoonnummers" Height="450" Width="800" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid>
+        <ListBox x:Name="lstPhoneNumbers" HorizontalAlignment="Left" Height="312" Margin="10,97,0,0" VerticalAlignment="Top" Width="365" SelectionChanged="lstPhoneNumbers_SelectionChanged" />
+        <GroupBox x:Name="grpDetails" Header="Details" HorizontalAlignment="Left" Height="237" Margin="401,97,0,0" VerticalAlignment="Top" Width="365">
+            <Grid >
+                <Label Content="Nummer : " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="Is mobiel : " HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+                <Label Content="Naam : " HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+                <Label Content="Voornaam : " HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtNumber" HorizontalAlignment="Left" Height="26" Margin="83,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="249"/>
+                <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="26" Margin="83,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="249"/>
+                <TextBox x:Name="txtFirstname" HorizontalAlignment="Left" Height="26" Margin="83,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="249"/>
+                <CheckBox x:Name="chkIsMobile" Content="" HorizontalAlignment="Left" Height="26" Margin="82,46,0,0" VerticalAlignment="Top" Width="41"/>
+                <Button x:Name="btnSave" Content="Bewaren" HorizontalAlignment="Left" Margin="10,151,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click" />
+                <Button x:Name="btnCancel" Content="Annuleren" HorizontalAlignment="Left" Margin="106,151,0,0" VerticalAlignment="Top" Width="75" Click="btnCancel_Click" />
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="grpCRUDButtons" Header="Bewerken"  HorizontalAlignment="Left" Height="70" Margin="401,10,0,0" VerticalAlignment="Top" Width="363">
+            <Grid>
+                <Button x:Name="btnNew" Content="Nieuw" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Click="btnNew_Click"/>
+                <Button x:Name="btnEdit" Content="Wijzig" HorizontalAlignment="Left" Margin="85,10,0,0" VerticalAlignment="Top" Width="75" Click="btnEdit_Click" />
+                <Button x:Name="btnDelete" Content="Verwijder" HorizontalAlignment="Left" Margin="165,10,0,0" VerticalAlignment="Top" Width="75" Click="btnDelete_Click"  />
+
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="grpSearch" Header="Zoek naam" HorizontalAlignment="Left" Height="70" Margin="12,10,0,0" VerticalAlignment="Top" Width="363">
+            <Grid >
+                <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252"/>
+                <Button x:Name="btnSearch" Content="Zoek" HorizontalAlignment="Left" Margin="266,10,0,0" VerticalAlignment="Top" Width="46" Height="27" Click="btnSearch_Click" />
+                <Button x:Name="btnEndSearch" Content="X" HorizontalAlignment="Left" Height="27" Margin="312,10,0,0" VerticalAlignment="Top" Width="29" Click="btnEndSearch_Click" />
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+
+</Window>
